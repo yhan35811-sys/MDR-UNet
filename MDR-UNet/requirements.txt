@@ -1,0 +1,14 @@
+torch
+torchvision
+numpy
+pandas
+scikit-learn
+opencv-python
+scipy
+natsort
+albumentations
+Pillow
+matplotlib
+tqdm
+segmentation_models_pytorch
+timm
