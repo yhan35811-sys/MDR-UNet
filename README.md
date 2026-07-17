@@ -119,18 +119,12 @@ This project is licensed under the MIT License - see the [LICENSE](https://www.g
 
 The manuscript is currently under review. The publication link, DOI, and final citation metadata will be added after publication.
 
----
-
-
----
 
 ## Licence
 
 The source code should be released with an explicit open-source licence. A permissive licence such as the MIT License may be used by adding a complete `LICENSE` file to the repository.
 
 The dataset licences are independent of the source-code licence. Users are responsible for obtaining dataset access and complying with the original providers' terms.
-
----
 
 ## Contact
 
@@ -139,5 +133,3 @@ For questions about the manuscript, implementation, or experimental protocol, pl
 **Yawu Zhao**  
 Corresponding author  
 Email: `zhaoyawu9608@163.com`
-
----
