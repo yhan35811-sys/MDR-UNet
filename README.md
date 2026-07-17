@@ -1,2 +1,56 @@
-MDR-UNet is a lightweight Mamba-based network for diabetic foot ulcer image segmentation, designed for accurate and efficient wound region extraction.
-<img width="2133" height="1573" alt="Fig1" src="https://github.com/user-attachments/assets/3bcb3ffc-2edb-49ee-ada4-19a6da0a71c2" />
+## Installation
+
+1. Clone the repository to your local machine:
+
+   Bash
+
+   ```
+   git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
+   cd your-repo-name
+   ```
+
+2. Create a virtual environment (optional but recommended) and install the required dependencies:
+
+   Bash
+
+   ```
+   pip install -r requirements.txt
+   ```
+
+   *Note: Ensure your environment supports PyTorch with CUDA for GPU acceleration.*
+
+## Usage
+
+### 1. Data Preparation
+
+Place your DFU image dataset into the `data/` directory. Ensure that the paths in `config.py` correctly point to your training, validation, and testing splits.
+
+### 2. Configuration
+
+Adjust training hyperparameters (learning rate, batch size, epochs) and model settings directly in `config.py`.
+
+### 3. Training
+
+To start training the segmentation model, run:
+
+Bash
+
+```
+python train.py
+```
+
+The script will automatically save the best model weights and training logs into the `src/results/` directory.
+
+### 4. Evaluation
+
+To evaluate the trained model on your test dataset and compute metrics like Dice, run:
+
+Bash
+
+```
+python evaluate.py
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
