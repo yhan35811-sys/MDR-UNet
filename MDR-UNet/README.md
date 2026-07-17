@@ -23,11 +23,11 @@
 
 ### 1. Data Preparation
 
-Place your DFU image dataset into the `data/` directory. Ensure that the paths in `src/config.py` correctly point to your training, validation, and testing splits.
+Place your DFU image dataset into the `data/` directory. Ensure that the paths in `config.py` correctly point to your training, validation, and testing splits.
 
 ### 2. Configuration
 
-Adjust training hyperparameters (learning rate, batch size, epochs) and model settings directly in `src/config.py`.
+Adjust training hyperparameters (learning rate, batch size, epochs) and model settings directly in `config.py`.
 
 ### 3. Training
 
@@ -36,19 +36,19 @@ To start training the segmentation model, run:
 Bash
 
 ```
-python src/train.py
+python train.py
 ```
 
 The script will automatically save the best model weights and training logs into the `src/results/` directory.
 
 ### 4. Evaluation
 
-To evaluate the trained model on your test dataset and compute metrics like Dice and HD95, run:
+To evaluate the trained model on your test dataset and compute metrics like Dice, run:
 
 Bash
 
 ```
-python src/evaluate.py
+python evaluate.py
 ```
 
 ## License
