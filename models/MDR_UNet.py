@@ -250,7 +250,7 @@ class EdgeAttention(nn.Module):
 
 class LDAM(nn.Module):
     """
-    改进版 LDAM：
+    LDAM：
         Channel Attention + Spatial Attention + Edge Attention
 
     mode:
@@ -267,10 +267,10 @@ class LDAM(nn.Module):
 
         self.channel_att = ECALayer(channels)
 
-        # 原来是 3×3，这里改为 5×5，提升空间感受野，参数增加很少
+        
         self.spatial_att = LiteSpatialAttention(kernel_size=5)
 
-        # 新增边界注意力
+        
         self.edge_att = EdgeAttention(kernel_size=3)
 
         self.gamma = nn.Parameter(torch.tensor(0.5))
@@ -303,8 +303,6 @@ class TinyMambaBlock(nn.Module):
     """
     Tiny Mamba-style 2D Selective State-Space Block。
 
-    这是一个轻量 Mamba/SSM 风格模块，不依赖 mamba_ssm，
-    适合直接放进 Tiny.py 跑。
 
     输入：
         B × C × H × W
@@ -518,11 +516,7 @@ class MDRUNet(nn.Module):
           ↓
         1×1 Conv 输出 mask
 
-    默认通道：
-        channels=(16, 32, 48, 64)
-
-    默认参数量：
-        约 0.075M，可满足 0.05M–0.10M。
+    
     """
 
     def __init__(
@@ -694,7 +688,7 @@ class MDRUNet(nn.Module):
         d1 = self.refine(d1)
 
         # Output logits
-        # 训练时建议直接喂给 BCEWithLogitsLoss，不要在这里 sigmoid
+       
         out = self.head(d1)      # B × n_classes × H × W
 
         return out
